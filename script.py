@@ -38,7 +38,8 @@ def getWebPage(subj, crse, user, password):
     page = ''
     br.open(focus.click(name='SUB_BTN'))
     for f in br.forms():
-        if f.get_value(nr=0) == '120151' and f.get_value(name='SEL_CRSE') == str(crse):
+        if f.get_value(nr=0) == '120151' and f.get_value(
+                name='SEL_CRSE') == str(crse):
             page = br.open(f.click()).read()
     return page
 
