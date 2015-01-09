@@ -42,7 +42,6 @@ def getWebPage(subj,crse,user,password):
 def parsePage(page):
     section_strings=page.split('<TR>')
     sections=[[elem1[22:-5] for elem1 in re.findall('<TD CLASS=\"dddefault\">(?!<A HREF).*</TD>',elem)] for elem in section_strings]
-    #(?!<A HREF)
     sections=[elem for elem in sections if elem!=[]]
     return sections
 
@@ -66,14 +65,13 @@ def calculateSpots(sections):
     return min_spots
 
 def notify(number, course_string):
-# put your own credentials here
     ACCOUNT_SID = "ACe91c20b8f0b83716ed3dde098aa7948b"
     AUTH_TOKEN = "4d21dd2ef31590018e0dc3f7843ed973"
 
     client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
     client.messages.create(
-        to="7325526317",
+        to="number",
         from_="+17328100111",
         body=course_string,
     )
