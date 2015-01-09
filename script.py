@@ -71,7 +71,7 @@ def notify(number, course_string):
     client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
     client.messages.create(
-        to="number",
+        to=number,
         from_="+17328100111",
         body=course_string,
     )
