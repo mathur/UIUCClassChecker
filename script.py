@@ -81,7 +81,7 @@ password=getpass.getpass('AD Password: ')
 course_name=raw_input('Course Subject (Subj): ')
 course_number=raw_input('Course Number (Crse): ')
 phone_number=raw_input('Your Phone Number: ')
-time_interval=raw_input('Time Interval (sec): ')
+time_interval=raw_input('Time Interval (min): ')
 
 while True:
     page=getWebPage(course_name,course_number,username,password)
@@ -91,4 +91,5 @@ while True:
         notify(phone_number,'Your course({0} {1}) has an open spot!'.format(course_name,course_number))
         break
     print 'Spots: {0}'.format(spots)
-    time.sleep(int(time_interval))
+    min_time_interval=int(time_interval) * 60
+    time.sleep(min_time_interval)
