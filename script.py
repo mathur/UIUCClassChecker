@@ -73,14 +73,14 @@ def calculateSpots(sections):
 
 
 def notify(number, course_string):
-    ACCOUNT_SID = "ACe91c20b8f0b83716ed3dde098aa7948b"
-    AUTH_TOKEN = "4d21dd2ef31590018e0dc3f7843ed973"
+    ACCOUNT_SID = "<twilio account sid>"
+    AUTH_TOKEN = "<twilio auth token>"
 
     client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
     client.messages.create(
         to=number,
-        from_="+17328100111",
+        from_="<twilio number>",
         body=course_string,
     )
 
