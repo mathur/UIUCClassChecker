@@ -27,6 +27,11 @@ Use both to install the needed non-standard dependencies.
     sudo easy_install mechanize
     sudo pip install twilio
 
+###Step 5###
+
+Set up a twilio account at http://twilio.com (the free trial works fine too). Open the file "twilio_accnt.py" and change the information between the two brackets for all 3 fields, getting the information to fill those fields from your account on your account's page.
+
+
 Thats it! All dependencies are now installed and you should be able to run the script.
 
 ##Usage##
