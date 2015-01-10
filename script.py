@@ -4,6 +4,7 @@ import getpass
 import re
 import time
 from twilio.rest import TwilioRestClient
+from twilio_accnt import SID, TOKEN, PHONE
 
 
 def getWebPage(subj, crse, user, password):
@@ -73,14 +74,14 @@ def calculateSpots(sections):
 
 
 def notify(number, course_string):
-    ACCOUNT_SID = "<twilio account sid>"
-    AUTH_TOKEN = "<twilio auth token>"
+    ACCOUNT_SID = SID
+    AUTH_TOKEN = TOKEN
 
     client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
     client.messages.create(
         to=number,
-        from_="<twilio number>",
+        from_=PHONE,
         body=course_string,
     )
 
