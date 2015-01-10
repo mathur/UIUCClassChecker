@@ -1,6 +1,6 @@
 #UIUC Class Checker#
 
-Checks every <user defined duration> to see if spots in a certain class open up. When they do, text you via Twilio's API!
+Checks every (user defined duration) to see if spots in a certain class open up. When they do, text you via Twilio's API!
 
 ##Installation##
 
