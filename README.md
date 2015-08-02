@@ -24,8 +24,8 @@ Install pip and easy_install, both of which will make installing dependencies bo
 
 Use both to install the needed non-standard dependencies.
 
-    sudo easy_install mechanize
-    sudo pip install twilio
+    source venv/bin/activate
+    pip install -r requirements.txt
 
 ###Step 5###
 
@@ -38,6 +38,7 @@ Thats it! All dependencies are now installed and you should be able to run the s
 
 To run the script, use the following command:
 
+    source venv/bin/activate
     python script.py
 
 The script will prompt you for several inputs before starting the looping process:
